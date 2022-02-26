@@ -16,7 +16,7 @@ CREATE TABLE roles (
     FOREIGN KEY(department_id) REFERENCES departments(id)
 );
 
-CREATE TABLE employee (
+CREATE TABLE employees (
     employee_id INTEGER AUTO_INCREMENT NOT NULL PRIMARY
     first_name VARCHAR(30),
     last_name VARCHAR(30),
