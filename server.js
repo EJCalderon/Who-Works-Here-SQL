@@ -4,8 +4,9 @@ const express = require('express');
 const consoleTable = require('console.table');
 
 const PORT = process.env.PORT || 3001;
+const app = express();
 
-app.use(express.urlencoded({extend: false}));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 const db = mysql.createConnection({
@@ -16,7 +17,8 @@ const db = mysql.createConnection({
     database: 'employees',
 });
 
-const startDatabase = () => {
+const prompt = async () => {
+    const answer = await 
     inquirer.prompt ([
        {
            type: 'list',
